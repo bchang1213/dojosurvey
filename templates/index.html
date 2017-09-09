@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Dojo Survey
+	</title>
+<!-- linking a css style sheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- linking a javascript file -->
+<!-- 	<script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+</head>
+
+
+<body>
+	<div>
+		<form action='/process' method='post'>
+			Your Name:<input class='formitems' type='text' name='new_name'>
+			Dojo Location:<select class='formitems' name="cars">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="fiat">Fiat</option>
+				<option value="audi">Audi</option>
+			</select>
+			Favorite Language:<select class='formitems' name="cars1">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="fiat">Fiat</option>
+				<option value="audi">Audi</option>
+			</select>
+			<textarea class='formitems' name="comment" form="usrform" rows="10" cols="50">Enter text here...</textarea>
+			<input class='button' type='submit' value='create user'>
+		</form>
+	</div>
+
+</body>
+
+
+</html>

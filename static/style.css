@@ -1,0 +1,14 @@
+form{
+	width: 300px;
+	border: 1px solid black;
+	padding: 2em 2em 2em 2em;
+}
+
+.formitems{
+	display: block;
+}
+
+.button{
+	color: white;
+	background-color: blue;
+}

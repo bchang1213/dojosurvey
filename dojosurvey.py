@@ -9,7 +9,7 @@ def landing():
 		return render_template("index.html")
 
 @app.route("/result", methods = ['POST'])
-def posting():
+def posting(**kwargs):
 	request.form['new_name']
 	request.form['cars']
 	request.form['cars1']

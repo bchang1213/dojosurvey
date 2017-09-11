@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 app.secret_key = 'secret103048580e8w7'
@@ -9,11 +9,7 @@ def landing():
 		return render_template("index.html")
 
 @app.route("/result", methods = ['POST'])
-def posting(**kwargs):
-	request.form['new_name']
-	request.form['cars']
-	request.form['cars1']
-	request.form['comment']
-	return render_template("submitted.html")
+def posting():
+	return render_template("submitted.html",name = request.form['new_name'], cars = request.form['cars'], cars1 = request.form['cars1'], comment = request.form['comment'])
 
 app.run(debug=True)

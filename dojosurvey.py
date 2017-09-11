@@ -13,7 +13,7 @@ def posting():
 	name = request.form['new_name']
 	cars = request.form['cars']
 	cars1 = request.form['cars1']
-	comment = request.form['comment'] or " "
+	comment = request.form['comment'] or ""
 	return render_template("submitted.html", name = name, cars = cars, cars1 = cars1, comment = comment)
 
 app.run(debug=True)
